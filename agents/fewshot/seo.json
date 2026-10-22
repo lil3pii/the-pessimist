@@ -1,0 +1,35 @@
+{
+  "critic": "seo",
+  "examples": [
+    {
+      "label": "high-risk",
+      "input": "We are the #1 project management tool for every team on earth. No other platform comes close. Start your free trial today.",
+      "output": {
+        "failure_scenario": "The page claims to fit every team, so it matches no specific query. Searchers looking for a niche workflow bounce, and the page earns broad impressions but no qualified clicks.",
+        "evidence_quote": "#1 project management tool for every team on earth",
+        "sub_scores": {
+          "intent_alignment": 9,
+          "title_body_coherence": 7,
+          "topic_coverage": 8
+        },
+        "probability": 0.81,
+        "suggested_fix": "Name the single highest-intent workflow in the title and first paragraph, then add one section for each of the three query variants the page actually serves."
+      }
+    },
+    {
+      "label": "low-risk",
+      "input": "How to run a 15-minute sprint retrospective that produces one owned action\n\nA 15-minute retrospective needs three blocks: two minutes to write silently, eight minutes to cluster and vote, five minutes to assign one owner. Skip the icebreaker. The agenda below is for teams of four to eight who already ship every two weeks. If your team is larger, split by workstream first.",
+      "output": {
+        "failure_scenario": "A small share of teams with unusual retrospective formats may not find their exact case, but the page answers the core query quickly and the title matches the body.",
+        "evidence_quote": "A 15-minute retrospective needs three blocks: two minutes to write silently, eight minutes to cluster and vote, five minutes to assign one owner.",
+        "sub_scores": {
+          "intent_alignment": 3,
+          "title_body_coherence": 2,
+          "topic_coverage": 3
+        },
+        "probability": 0.27,
+        "suggested_fix": "Add a one-line note for distributed teams and an example agenda image so the page covers the most common adjacent query."
+      }
+    }
+  ]
+}

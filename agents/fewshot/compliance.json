@@ -1,0 +1,35 @@
+{
+  "critic": "compliance",
+  "examples": [
+    {
+      "label": "high-risk",
+      "input": "Our supplement cures insomnia in 97% of users. Unlike prescription medication, it has no side effects and works from the first night. Stop wasting money on doctors and order now.",
+      "output": {
+        "failure_scenario": "The page makes an unsubstantiated efficacy claim, a false safety comparison to prescription medicine, and discourages medical care. In the US this invites FTC and FDA exposure; in the EU it compounds medicinal-claim violations.",
+        "evidence_quote": "it has no side effects",
+        "sub_scores": {
+          "claim_substantiation": 10,
+          "jurisdictional_risk": 9,
+          "disclosure_adequacy": 8
+        },
+        "probability": 0.93,
+        "suggested_fix": "Remove the cure and first-night claims, replace the absolute safety statement with a qualified one, add the mandatory supplement disclaimer, and tell readers to consult a clinician."
+      }
+    },
+    {
+      "label": "low-risk",
+      "input": "Most adults need seven to nine hours of sleep. Our magnesium blend is a supplement, not a treatment for insomnia. In a 2023 randomized trial of 120 adults, participants reported falling asleep 11 minutes faster on average; results vary. Consult your clinician before combining it with sedatives. This article contains an affiliate link.",
+      "output": {
+        "failure_scenario": "A reader could still overgeneralize the trial result, but the population, source, disclaimer, and affiliate disclosure are present, leaving limited exposure.",
+        "evidence_quote": "Our magnesium blend is a supplement, not a treatment for insomnia.",
+        "sub_scores": {
+          "claim_substantiation": 3,
+          "jurisdictional_risk": 2,
+          "disclosure_adequacy": 2
+        },
+        "probability": 0.25,
+        "suggested_fix": "Add a direct link to the trial and name the population so readers can judge applicability without emailing support."
+      }
+    }
+  ]
+}

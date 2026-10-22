@@ -1,0 +1,35 @@
+{
+  "critic": "competitive",
+  "examples": [
+    {
+      "label": "high-risk",
+      "input": "We offer a powerful, easy-to-use, all-in-one platform for modern teams. Trusted by leading companies. Our best-in-class solution helps you collaborate better and unlock productivity. Request a demo today.",
+      "output": {
+        "failure_scenario": "Every sentence could describe a dozen competitors. With no unique mechanism, switching cost, or proof, the reader defaults to the incumbent or to doing nothing.",
+        "evidence_quote": "powerful, easy-to-use, all-in-one platform for modern teams",
+        "sub_scores": {
+          "differentiation": 9,
+          "specificity": 9,
+          "evidence_uniqueness": 8
+        },
+        "probability": 0.87,
+        "suggested_fix": "Replace the category adjectives with one named mechanism, one measurable outcome, and one proof point that a competitor cannot copy verbatim."
+      }
+    },
+    {
+      "label": "low-risk",
+      "input": "Why we rebuilt our CSV importer around a queue\n\nMost importers parse the whole file before showing progress. Ours writes a resumable checkpoint every 500 rows. If the browser closes at row 40,000, the next run continues at 40,001 rather than starting over. We benchmarked a 2.1M-row file: 18 minutes on the old importer, 4 minutes and 12 seconds on the new one, with the same hardware. The tradeoff is a 300 ms delay before the first row appears.",
+      "output": {
+        "failure_scenario": "A reader who only needs tiny files may not care about resumability, but the mechanism, benchmark, and tradeoff give a credible reason to choose this importer for large files.",
+        "evidence_quote": "Ours writes a resumable checkpoint every 500 rows.",
+        "sub_scores": {
+          "differentiation": 2,
+          "specificity": 2,
+          "evidence_uniqueness": 3
+        },
+        "probability": 0.23,
+        "suggested_fix": "Add the benchmark methodology and machine specification so the comparison can be independently verified."
+      }
+    }
+  ]
+}

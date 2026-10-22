@@ -1,0 +1,35 @@
+{
+  "critic": "behavioral",
+  "examples": [
+    {
+      "label": "high-risk",
+      "input": "Since the beginning of commerce, humans have sought better tools. Our journey began in 2019, when three friends noticed that spreadsheets were hard. Today we are announcing a new era of work. We believe collaboration can be better. Join the waitlist. Later, we will explain features.",
+      "output": {
+        "failure_scenario": "The ask arrives before any value is shown, and the first three paragraphs are company history. A time-poor reader leaves before reaching the product, so the waitlist gets curiosity clicks but few qualified signups.",
+        "evidence_quote": "Join the waitlist.",
+        "sub_scores": {
+          "cta_timing": 9,
+          "length_patience": 8,
+          "cognitive_load": 7
+        },
+        "probability": 0.81,
+        "suggested_fix": "Open with the concrete change for the reader, move the waitlist ask below the first proof point, and cut the company history to one sentence."
+      }
+    },
+    {
+      "label": "low-risk",
+      "input": "Your weekly report takes 90 minutes. This template cuts the first draft to 12.\n\nPaste last week's numbers into the three tabs. The summary writes itself. Review the flagged anomalies, then send.\n\n[Get the template] Free. No account required.\n\nThe template does not replace judgment: it removes the formatting work so you can spend the 78 minutes on the two numbers that moved.",
+      "output": {
+        "failure_scenario": "Some readers may want a deeper walkthrough before downloading, but the value is concrete and the ask follows immediately after proof.",
+        "evidence_quote": "Your weekly report takes 90 minutes.",
+        "sub_scores": {
+          "cta_timing": 3,
+          "length_patience": 2,
+          "cognitive_load": 3
+        },
+        "probability": 0.27,
+        "suggested_fix": "Add one screenshot of the finished summary so the reader can verify the output before downloading."
+      }
+    }
+  ]
+}
