@@ -8,7 +8,7 @@ Most content tools ask, "Is this good?" This one asks, "How does it fail?"
 
 ![A completed pre-mortem: deterministic 0.76 risk score, executive readout, and ranked top failures](docs/screenshot-risk.png)
 
-- **Live app:**: https://the-pessimist.vercel.app — no server API key required. Use `/demo` for a keyless sample.
+- **Live app:** https://the-pessimist.vercel.app — no server API key required. Use `/demo` for a keyless sample.
 - Sample report: `/demo`
 - Demo video: [`demo/artifacts/the-pessimist-demo.webm`](./demo/artifacts/the-pessimist-demo.webm) (60s, 1280×720, local mock provider — no API credit used)
 - Critic agents: [`agents/`](./agents)
